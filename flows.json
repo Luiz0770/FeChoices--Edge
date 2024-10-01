@@ -1,0 +1,701 @@
+[
+    {
+        "id": "0aaa3f664eea48a4",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b753423c24984218",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "826afa5c74d1f272",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "4dcf935bbf67d386",
+        "type": "ui_group",
+        "name": "Informações",
+        "tab": "b753423c24984218",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b0710c9b0d96a34c",
+        "type": "node-red-contrib-whatsapp-cmb-account",
+        "name": "Luiz"
+    },
+    {
+        "id": "1f9ead0f873dbb8c",
+        "type": "serial-port",
+        "name": "",
+        "serialport": "COM10",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "4194189525c90307",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "b753423c24984218",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e6bcc99d15e71e9f",
+        "type": "ui_group",
+        "name": "Status",
+        "tab": "b753423c24984218",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ebcd524b5e459e7a",
+        "type": "json",
+        "z": "0aaa3f664eea48a4",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 410,
+        "y": 220,
+        "wires": [
+            [
+                "0166c24811fcc574",
+                "c55eddfcd67c6ac3",
+                "5423e788b17ef4a3",
+                "794f47792527ce5a",
+                "2dbcee0ce16a7f5a",
+                "4757537e89c79835"
+            ]
+        ]
+    },
+    {
+        "id": "0166c24811fcc574",
+        "type": "change",
+        "z": "0aaa3f664eea48a4",
+        "name": "Temperatura",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.Temperatura",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 40,
+        "wires": [
+            [
+                "3f9bb537350cabba"
+            ]
+        ]
+    },
+    {
+        "id": "3f9bb537350cabba",
+        "type": "ui_gauge",
+        "z": "0aaa3f664eea48a4",
+        "name": "",
+        "group": "4dcf935bbf67d386",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "Temperatura",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "40",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 790,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "c55eddfcd67c6ac3",
+        "type": "change",
+        "z": "0aaa3f664eea48a4",
+        "name": "Umidade",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.Umidade",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 100,
+        "wires": [
+            [
+                "69a7d705fe0e38fb"
+            ]
+        ]
+    },
+    {
+        "id": "69a7d705fe0e38fb",
+        "type": "ui_gauge",
+        "z": "0aaa3f664eea48a4",
+        "name": "",
+        "group": "4dcf935bbf67d386",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "Umidade",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "80",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 780,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "70a61248b603926a",
+        "type": "function",
+        "z": "0aaa3f664eea48a4",
+        "name": "Temp Alta",
+        "func": "// Lendo os dados de entrada do Arduino\nlet temperatura = msg.payload.Temperatura;\nlet status = msg.payload.Status;\n\n// Personalizando a mensagem de acordo com a temperatura\nlet mensagem = `Alerta de Superaquecimento! A temperatura dos pneus atingiu ${temperatura}°C. É necessário reduzir a temperatura.`;\n\n// Atualizando a mensagem a ser enviada via WhatsApp\nmsg.payload = mensagem;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 300,
+        "wires": [
+            [
+                "1eb91f4479bf8b33",
+                "16b247fa640abc92"
+            ]
+        ]
+    },
+    {
+        "id": "0173a01eb369096c",
+        "type": "function",
+        "z": "0aaa3f664eea48a4",
+        "name": "Temp Baixa",
+        "func": "// Lendo os dados de entrada do Arduino\nlet temperatura = msg.payload.Temperatura;\nlet status = msg.payload.Status;\n\n// Personalizando a mensagem de acordo com a temperatura\nlet mensagem = `Alerta de Baixa Temperatura! A temperatura atual é de ${temperatura}°C. O pode estar com sistema defeito.`;\n\n// Atualizando a mensagem a ser enviada via WhatsApp\nmsg.payload = mensagem;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 380,
+        "wires": [
+            [
+                "b3f9f5127d8664dc",
+                "732597fbaa16dd83"
+            ]
+        ]
+    },
+    {
+        "id": "1eb91f4479bf8b33",
+        "type": "node-red-contrib-whatsapp-cmb-send-message",
+        "z": "0aaa3f664eea48a4",
+        "name": "",
+        "credtype": "account",
+        "account": "b0710c9b0d96a34c",
+        "text": "",
+        "phonenumbervalue": "",
+        "apikeyvalue": "",
+        "apikeyinputtypemessage": "msg",
+        "phonenumberinputtypemessage": "msg",
+        "inputtypemessage": "str",
+        "rejectssl": false,
+        "x": 1100,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5423e788b17ef4a3",
+        "type": "switch",
+        "z": "0aaa3f664eea48a4",
+        "name": "Temperatura",
+        "property": "payload.Temperatura",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "40",
+                "vt": "num"
+            },
+            {
+                "t": "lt",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 610,
+        "y": 360,
+        "wires": [
+            [
+                "70a61248b603926a"
+            ],
+            [
+                "0173a01eb369096c"
+            ]
+        ]
+    },
+    {
+        "id": "ca321917ae265bfe",
+        "type": "function",
+        "z": "0aaa3f664eea48a4",
+        "name": "Umid Alta",
+        "func": "// Lendo os dados de entrada do Arduino\nlet umidade = msg.payload.Umidade;\nlet status = msg.payload.Status;\n\n// Personalizando a mensagem de acordo com a umidade\nlet mensagem = `Alerta de Alta Umidade! A umidade está em ${umidade}%. A pista pode está molhada. Possivel ter chuva nos proximos minutos`;\n    \n// Atualizando a mensagem a ser enviada via WhatsApp\nmsg.payload = mensagem;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 520,
+        "wires": [
+            [
+                "918e7cef22aa7fb4",
+                "35ec2ef4e65260d4"
+            ]
+        ]
+    },
+    {
+        "id": "15cb04ccb28ab3b8",
+        "type": "function",
+        "z": "0aaa3f664eea48a4",
+        "name": "Temp Baixa",
+        "func": "// Lendo os dados de entrada do Arduino\nlet umidade = msg.payload.Umidade;\nlet status = msg.payload.Status;\n\n// Personalizando a mensagem de acordo com a umidade\nlet mensagem = `Alerta de Baixa Umidade! A umidade está em ${umidade}%. A pista está seca. A chuva acabou e os carros devem trocar os pneus.`;\n\n// Atualizando a mensagem a ser enviada via WhatsApp\nmsg.payload = mensagem;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 600,
+        "wires": [
+            [
+                "39372c32cb670112",
+                "245069a6ccb5fea0"
+            ]
+        ]
+    },
+    {
+        "id": "794f47792527ce5a",
+        "type": "switch",
+        "z": "0aaa3f664eea48a4",
+        "name": "Umidade",
+        "property": "payload.Umidade",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "80",
+                "vt": "num"
+            },
+            {
+                "t": "lt",
+                "v": "20",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 600,
+        "y": 460,
+        "wires": [
+            [
+                "ca321917ae265bfe"
+            ],
+            [
+                "15cb04ccb28ab3b8"
+            ]
+        ]
+    },
+    {
+        "id": "3ad03fa4096cb7e8",
+        "type": "serial in",
+        "z": "0aaa3f664eea48a4",
+        "name": "",
+        "serial": "1f9ead0f873dbb8c",
+        "x": 230,
+        "y": 220,
+        "wires": [
+            [
+                "ebcd524b5e459e7a"
+            ]
+        ]
+    },
+    {
+        "id": "f6094a2f7db16c43",
+        "type": "inject",
+        "z": "0aaa3f664eea48a4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"Temperatura\":50,\"Umidade\":10, \"Status\": \"Critico\"}",
+        "payloadType": "str",
+        "x": 230,
+        "y": 160,
+        "wires": [
+            [
+                "ebcd524b5e459e7a"
+            ]
+        ]
+    },
+    {
+        "id": "b3f9f5127d8664dc",
+        "type": "node-red-contrib-whatsapp-cmb-send-message",
+        "z": "0aaa3f664eea48a4",
+        "name": "",
+        "credtype": "account",
+        "account": "b0710c9b0d96a34c",
+        "text": "",
+        "phonenumbervalue": "",
+        "apikeyvalue": "",
+        "apikeyinputtypemessage": "msg",
+        "phonenumberinputtypemessage": "msg",
+        "inputtypemessage": "str",
+        "rejectssl": false,
+        "x": 1100,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "918e7cef22aa7fb4",
+        "type": "node-red-contrib-whatsapp-cmb-send-message",
+        "z": "0aaa3f664eea48a4",
+        "name": "",
+        "credtype": "account",
+        "account": "b0710c9b0d96a34c",
+        "text": "",
+        "phonenumbervalue": "",
+        "apikeyvalue": "",
+        "apikeyinputtypemessage": "msg",
+        "phonenumberinputtypemessage": "msg",
+        "inputtypemessage": "str",
+        "rejectssl": false,
+        "x": 1100,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "39372c32cb670112",
+        "type": "node-red-contrib-whatsapp-cmb-send-message",
+        "z": "0aaa3f664eea48a4",
+        "name": "",
+        "credtype": "account",
+        "account": "b0710c9b0d96a34c",
+        "text": "",
+        "phonenumbervalue": "",
+        "apikeyvalue": "",
+        "apikeyinputtypemessage": "msg",
+        "phonenumberinputtypemessage": "msg",
+        "inputtypemessage": "str",
+        "rejectssl": false,
+        "x": 1100,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2dbcee0ce16a7f5a",
+        "type": "debug",
+        "z": "0aaa3f664eea48a4",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "4757537e89c79835",
+        "type": "change",
+        "z": "0aaa3f664eea48a4",
+        "name": "Status",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.Status",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 160,
+        "wires": [
+            [
+                "931215bfb9c1bad9"
+            ]
+        ]
+    },
+    {
+        "id": "931215bfb9c1bad9",
+        "type": "ui_text",
+        "z": "0aaa3f664eea48a4",
+        "group": "e6bcc99d15e71e9f",
+        "order": 0,
+        "width": "6",
+        "height": "5",
+        "name": "",
+        "label": "Nível de Severidade:",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "28",
+        "color": "#000000",
+        "x": 820,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "16b247fa640abc92",
+        "type": "debug",
+        "z": "0aaa3f664eea48a4",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "732597fbaa16dd83",
+        "type": "debug",
+        "z": "0aaa3f664eea48a4",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "35ec2ef4e65260d4",
+        "type": "debug",
+        "z": "0aaa3f664eea48a4",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "245069a6ccb5fea0",
+        "type": "debug",
+        "z": "0aaa3f664eea48a4",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 600,
+        "wires": []
+    }
+]
